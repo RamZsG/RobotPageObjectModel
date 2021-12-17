@@ -27,3 +27,17 @@ ForLoop5
         Log To Console    ${e}  
         Exit For Loop If    ${e}==4 
     END
+
+ForLoop6
+    @{ItemList}    Create List    1  2  3  4  5  6  7  8  9  10
+    FOR  ${e}  IN    @{ItemList} 
+        Continue For Loop If    ${e}==4 
+        Log To Console    ${e} 
+    END
+    
+ForLoop7
+    @{ItemList}    Create List    as    df    gh    tu    io
+    FOR  ${e}  IN    @{ItemList}
+        Exit For Loop If    '${e}'=='tu'
+        Log To Console    ${e} 
+    END
