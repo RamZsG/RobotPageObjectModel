@@ -18,3 +18,10 @@ LoginTest
     Click on logout
     Validate Logged Out
     Close my browser
+
+KeyboardKeys
+    Open my browser    ${URL}    ${Browser}
+    Press Keys    ${txtLoginUsername}    ${Username}
+    Press Keys    ${txtPassword}    ${Password}
+    Press Keys    ${txtPassword}    ENTER
+    Close my browser
