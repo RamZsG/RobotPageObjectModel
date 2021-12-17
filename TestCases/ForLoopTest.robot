@@ -41,3 +41,10 @@ ForLoop7
         Exit For Loop If    '${e}'=='tu'
         Log To Console    ${e} 
     END
+
+ForLoop8
+    @{ItemList}    Create List    as    df    gh    tu    io
+    FOR  ${e}  IN    @{ItemList}
+        Continue For Loop If    '${e}'=='tu'
+        Log To Console    ${e} 
+    END
